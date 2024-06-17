@@ -1,0 +1,22 @@
+services:
+  # node:
+  #   restart: always
+  #   build: .
+  #   image: node/portal-roque
+  #   container_name: node
+  #   ports:
+  #     - '${APP_PORT:-3000}:3000'
+  #   volumes:
+  #     - ./:/usr/src/app
+  #   environment:
+  #     - NODE_ENV=dev
+  #   command: /usr/src/cache/entrypoint.sh
+  #   user: 1000:1000
+  web:
+    image: nginx
+    container_name: nginx
+    ports:
+      - '${NGINX_PORT:-8000}:8000'
+    # volumes:
+    #   - ./nginx:/etc/nginx/
+    command: [nginx-debug, '-g', 'daemon off;']
