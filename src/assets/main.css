@@ -8,14 +8,7 @@ body {
 
 #app {
   flex: 1;
-  display: grid;
   margin: 0 auto;
-  grid-template-rows: 66px 1fr 66px;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  height: 100vh;
-  font-weight: normal;
+  background-color: #F0F0F0;
   font-family: 'Poppins', 'Verdana', 'Sans-serif';
 }
